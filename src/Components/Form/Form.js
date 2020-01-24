@@ -7,6 +7,7 @@ class Form extends Component{
   constructor(props){
     super(props)
     this.state = {
+      id: '',
       name: '',
       price: 0,
       img: '',
@@ -26,6 +27,13 @@ class Form extends Component{
         console.log(results.data)
         this.setState({id, name, price, img, edit: true})
       })
+    }
+  }
+
+  componentDidUpdate(prevProp){
+    const {id} = this.props.match.params
+    if(!id && this.props !== prevProp){
+      this.setState({id: '', name: '', price: '', img: '', edit: false})
     }
   }
 
