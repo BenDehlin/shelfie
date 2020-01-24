@@ -22,6 +22,27 @@ a{
   font-size: 24px;
 }
 
+button{
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+button:hover{
+  background-color: white;
+  color: black;
+}
+
+button:active{
+  background-color: #555555;
+  color: white;
+}
+
+img{
+  height: 200px;
+}
+
 .form{
   display: flex;
   flex-flow: column;
@@ -31,6 +52,7 @@ a{
 
 .list{
   background-color: #555555;
+  min-height: 100vh;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -38,10 +60,20 @@ a{
 
 .product{
   display: flex;
+  margin: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   min-height: 450px;
   min-width: 450px;
+  justify-content: space-around;
   flex-flow: column;
   align-items: center;
   background-color: black;
   color: white;
+}
+
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }

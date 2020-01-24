@@ -68,23 +68,28 @@ class Form extends Component{
   render(){
     const {edit, name, price, img} = this.state
     return(
-      <section className="form">
+      <section className="list">
+        <section className="product">
+        <img src={img || 'https://via.placeholder.com/200'} />
+        <h2>Image Url:</h2> 
+        <input
+          name='img'
+          value={img}
+          placeholder='Enter Img'
+          onChange={(e) => this.handleChange(e.target)}
+        />
+        <h2>Name:</h2>
         <input
           name='name'
           value={name}
           placeholder='Enter Name'
           onChange={(e) => this.handleChange(e.target)}
         />
+        <h2>Price: </h2>
         <input
           name='price'
           value={price}
           placeholder='Enter Price'
-          onChange={(e) => this.handleChange(e.target)}
-        />
-        <input
-          name='img'
-          value={img}
-          placeholder='Enter Img'
           onChange={(e) => this.handleChange(e.target)}
         />
         <div className="buttons">
@@ -102,6 +107,7 @@ class Form extends Component{
         }
         </div>
       </section>
+    </section>
     )
   }
 }

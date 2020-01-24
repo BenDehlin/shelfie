@@ -41,11 +41,18 @@ class Dashboard extends Component{
   }
 
   render(){
-    console.log(this.state.inventory)
+
     // const {productToEdit} = this.props
     return(
 
   <section className="list">
+    {
+    this.state.inventory.length === 0 && 
+    <div>
+      <button
+        onClick={() => this.props.history.push('/form')}
+      >Create New</button>
+    </div>}
     {
     this.state.inventory.map(element => (
       <Product productToEdit={this.productToEdit} key={element.id} product={element} deleteProduct={this.deleteProduct} />
