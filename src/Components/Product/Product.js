@@ -12,7 +12,7 @@ function Product(props){
       <div className="product-data">
         <div className="product-info">
           <p>Name: {name}</p>
-          <p>Price: {price}</p>
+          <p>Price: ${price}</p>
         </div>
         <div className="buttons">
         <Link to={`/form/${id}`}><button>Edit</button></Link>

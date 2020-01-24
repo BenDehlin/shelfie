@@ -88,6 +88,7 @@ class Form extends Component{
         <h2>Price: </h2>
         <input
           name='price'
+          type='number'
           value={price}
           placeholder='Enter Price'
           onChange={(e) => this.handleChange(e.target)}
