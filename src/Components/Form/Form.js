@@ -69,7 +69,7 @@ class Form extends Component{
     const {edit, name, price, img} = this.state
     return(
       <section className="list">
-        <section className="product">
+        <section className="product form">
         <img src={img || 'https://via.placeholder.com/200'} />
         <h2>Image Url:</h2> 
         <input
@@ -93,15 +93,15 @@ class Form extends Component{
           onChange={(e) => this.handleChange(e.target)}
         />
         <div className="buttons">
-        <button
+        <button className="form-button"
           onClick = {() => {
             this.clearInputs()}}
         >Cancel</button>
         {edit ?
-        <button
+        <button className="form-button"
           onClick = {() => this.updateProduct()}
-        >Update</button> :
-        <button
+        >Save Changes</button> :
+        <button className="form-button"
           onClick = {() => this.postProduct()}
         >Add to Inventory</button>
         }
